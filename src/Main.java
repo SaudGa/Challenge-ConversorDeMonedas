@@ -1,29 +1,52 @@
-import com.google.gson.Gson;
-
-import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args){
         Scanner lectura = new Scanner(System.in);
-        URI direccion =URI.create("https://v6.exchangerate-api.com/v6/64be233f6a56c7cc2dd20db5/latest/USD");
-        HttpClient client =HttpClient.newHttpClient();
-        HttpRequest request = HttpRequest.newBuilder().uri(direccion).build();
+        ConsultaMoneda consulta = new ConsultaMoneda();
+        int opcion = 0;
 
-        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        while (opcion != 7){
+            System.out.println("******************************************************************************");
+            System.out.println("Bienvenido al conversor de monedas <3");
+            System.out.println("Elija una de las siguientes opciones de transformación: \n" +
+                    "1)USD a CLP \n" +
+                    "2)CLP a USD \n" +
+                    "3)CAD a CLP \n" +
+                    "4)CLP a CAD \n" +
+                    "5)USD a CAD \n" +
+                    "6)CAD a USD \n" +
+                    "7)Salir del sistema \n");
+            System.out.println("******************************************************************************");
+            opcion = lectura.nextInt();
+            lectura.nextLine();
+            
+            switch (opcion){
+                case 1:
+                    TransformarMoneda.convertir("USD", "CLP", consulta, lectura);
+                    break;
+                case 2:
+                    TransformarMoneda.convertir("CLP", "USD", consulta, lectura);
+                    break;
+                case 3:
+                    TransformarMoneda.convertir("CAD", "CLP", consulta, lectura);
+                    break;
+                case 4:
+                    TransformarMoneda.convertir("CLP", "CAD", consulta, lectura);
+                    break;
+                case 5:
+                    TransformarMoneda.convertir("USD", "CAD", consulta, lectura);
+                    break;
+                case 6:
+                    TransformarMoneda.convertir("CAD", "USD", consulta, lectura);
+                    break;
+                case 7:
+                    System.out.println("Gracias por ocupar mi sistema <3");
+                    break;
+            }
+        }
 
-        System.out.println(response.body());
 
 
-//        try {
-//            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-//            return new Gson().fromJson(response.body(), Moneda.class);
-//        } catch (Exception e) {
-//            throw new RuntimeException("ERROR");
-//        }
     }
 }
