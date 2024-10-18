@@ -16,7 +16,11 @@ API de Exchange Rate: Para obtener tasas de cambio actuales.
 Gson: Biblioteca para el manejo de JSON.
 
 Contacto 📬
+<ul>
+  <li>Diego Saud - diegosaud282@gmail.com</li>
+  <li>[SaudGa](https://github.com/SaudGa)</li>
+  <li>www.linkedin.com/in/diego-saud-analistaprogramador</li>
+</ul>
 
-Diego Saud - diegosaud282@gmail.com
-[SaudGa](https://github.com/SaudGa)
-www.linkedin.com/in/diego-saud-analistaprogramador
+
+
