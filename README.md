@@ -6,14 +6,18 @@ Este es un proyecto de consola en Java que permite convertir entre diferentes di
 </h4>
 
 Características ✨
-Conversión en tiempo real: Usa una API externa para obtener las tasas de cambio actualizadas.
-Interfaz intuitiva en consola: Selecciona fácilmente las monedas de origen y destino.
-Compatibilidad: Compatible con cualquier sistema operativo que soporte Java.
+<ul>
+  <li>Conversión en tiempo real: Usa una API externa para obtener las tasas de cambio actualizadas.</li>
+  <li>Interfaz intuitiva en consola: Selecciona fácilmente las monedas de origen y destino.</li>
+  <li>Compatibilidad: Compatible con cualquier sistema operativo que soporte Java.</li>
+</ul>
 
 Tecnologías Utilizadas 🛠️
-Java: Lenguaje de programación principal.
-API de Exchange Rate: Para obtener tasas de cambio actuales.
-Gson: Biblioteca para el manejo de JSON.
+<ul>
+  <li>Java: Lenguaje de programación principal.</li>
+  <li>API de Exchange Rate: Para obtener tasas de cambio actuales.</li>
+  <li>Gson: Biblioteca para el manejo de JSON.</li>
+</ul>
 
 Contacto 📬
 <ul>
